@@ -24,3 +24,10 @@ body::-webkit-scrollbar{
         height: 150vh;
     }
 }
+
+
+
+img {
+    user-select: none; /* 防止选中图片 */
+    pointer-events: none; /* 禁止鼠标事件，防止拖动 */
+}

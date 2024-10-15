@@ -1,16 +1,18 @@
 import styles from '@/styles/page.module.css'
 import Image from 'next/image'
-import pic2 from "../../assests/images/pic2.png"
-import pic3 from "../../assests/images/pic3.png"
-import {VscTwitter} from 'react-icons/vsc'
-import {AiFillGithub} from 'react-icons/ai'
-import {FiExternalLink} from 'react-icons/fi'
+import pic from "../../assests/images/pic.jpg"
+import pic2 from "../../assests/images/pic2.webp"
+import { VscTwitter } from 'react-icons/vsc'
+import { AiFillGithub } from 'react-icons/ai'
+import { FiExternalLink } from 'react-icons/fi'
 
-export const ExploreAI = () => {
+export const Blog = () => {
     return (        
         <div>
-            <p>Explore AI is an AI Powered Search for Youtube Videos. Enables search for answers directly inside thousands of YouTube videos, free-of-cost, easy-to-navigate and fast.</p>
-            <a href='exploreai.vercel.app'><FiExternalLink style={{marginTop:"10px"}} size={25}/></a>
+            <p>"Welcome to Dark.Lotus.Blog! Here, I will share personal life and growth stories, exploring the mysteries of various technologies" </p>
+            <a href='https://blog.darklotus.cn' target="_blank" rel="noopener noreferrer">
+                <FiExternalLink style={{marginTop:"10px"}} size={25}/>
+            </a>
         </div>
     )
 }
@@ -18,9 +20,13 @@ export const ExploreAI = () => {
 export const Uiaftersex = () => {
     return (        
         <div>
-            <p>an intuitive laboratory canvas that showcases uniquely crafted user interfaces & interactions that make you wanna (hopefully) come back to, after sex.❤️‍🩹</p>
-            <a href='https://uiaftersex.vercel.app/'><FiExternalLink style={{marginTop:"10px"}} size={25}/></a>
-            <a href='https://github.com/TanayDesai/uiaftersex'><AiFillGithub style={{marginTop:"10px",marginLeft:"8px"}} size={25}/></a>
+            <p>"Welcome to my GitHub! Here are the projects I've been working on, and I invite you to join me in exploring them"</p>
+            <a href='https://note.darklotus.cn' target="_blank" rel="noopener noreferrer">
+                <FiExternalLink style={{marginTop:"10px"}} size={25}/>
+            </a>
+            <a href='https://github.com/lianlianlianlianlianlian' target="_blank" rel="noopener noreferrer">
+                <AiFillGithub style={{marginTop:"10px",marginLeft:"8px"}} size={25}/>
+            </a>
         </div>
     )
 }
@@ -29,8 +35,12 @@ export const Socials = () => {
     return (        
         <div style={{margin:"auto",textAlign:"center"}}> 
             <p>
-            <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}}  size={40}/></a> 
-            <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={40}/></a>
+                <a href='https://twitter.com/lotusdark' target="_blank" rel="noopener noreferrer">
+                    <VscTwitter style={{marginLeft: "5px"}} size={40}/>
+                </a> 
+                <a href='https://github.com/lianlianlianlianlianlian' target="_blank" rel="noopener noreferrer">
+                    <AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={40}/>
+                </a>
             </p>
         </div>
     )
@@ -39,69 +49,81 @@ export const Socials = () => {
 export const Notes = () => {
     return (        
         <div> 
-            <div className={styles.notesHeader}>Tanay Desai</div>
-            <p>crafting software & ui interfaces Feel free to use it for your own personal websites.Feel free to use it for your own personal websites. Feel free to use it for your own personal websites.</p>
+            <div className={styles.notesHeader}>My Name Is Lian.Ding</div>
+            <p>
+                If you want to contact me, please send me an email！<br />
+                Email：lian@darklotus.cn<br />
+                Are u Ok？Are u Ok？Are u Ok？<br />
+            </p>
         </div>
     )
 }
 
-
 export const safariTabTexts = [
-{
-    name: "Explore AI",
-    text:  <ExploreAI />,
-    x:-350,
-    y:-200,
-    drag: true
-},
-{
-    name: "uiaftersex",
-    text:  <Uiaftersex />,
-    x:300,
-    y:-100,
-    drag: true
+    {
+        name: "blog.darklotus.cn",
+        text:  <Blog />,
+        x: -350,
+        y: -200,
+        drag: true
+    },
+    {
+        name: "github.com/lianlianlianlianlianlian",
+        text:  <Uiaftersex />,
+        x: 300,
+        y: -100,
+        drag: true
     },   
- ]
+]
  
- export const notesTabTexts = [
-{
-    name:"me.txt",
-    text:<Notes/>,
-    x:120,
-    link:"",
-    y:200,
-    drag: false,
-    deg:"5",
+export const notesTabTexts = [
+    {
+        name: "me.txt",
+        text: <Notes />,
+        x: 120,
+        y: 200,
+        drag: true,
+        deg: "5",
     },
-{
-    name:"social.zip",
-    text: <Socials/>,
-    link:"",
-    x:400,
-    y:0,
-    drag: false,
-    deg:"-5",
+    {
+        name: "social.zip",
+        text: <Socials />,
+        link: "",
+        x: 600,
+        y: 110,
+        drag: true,
+        deg: "-5",
     },
-{
-    name:"notes.txt",
-    text:"This canvas is open source. Feel free to use it for your own personal websites.",
-    x:-450,
-    link:"https://github.com/TanayDesai/canvasify",
-    y:400,
-    drag: false,
-    deg:"-5",
+    {
+        name: "notes.txt",
+        text: "I am learning Next.js",
+        x: -450,
+        y: 350,
+        drag: true,
+        deg: "5",
     },
 ]
 
-  export const picTabTexts = [
-{
-    pic: pic3,
-    link: "https://tanaydesai5.wixsite.com/tanaydesai",
-    width:150,
-    height:150,
-    x:-100,
-    y:-200,
-    drag: true,
+export const picTabTexts = [
+    {
+        pic: pic,
+        link: "https://gallery.darklotus.cn",
+        width: 200,
+        height: 200,
+        x: 400,
+        y: -600,
+        drag: true,
     },
-  ]
- 
+]
+
+export const picTabTexts2 = [
+    {
+        pic: pic2,
+        link: "https://gallery.darklotus.cn",
+        width: 220,
+        height: 220,
+        x: -100,
+        y: -550,
+        drag: true,
+    },
+]

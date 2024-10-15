@@ -6,7 +6,8 @@ import useWindowSize from "@rooks/use-window-size"
 import NotesTab from '@/components/tabs/notesTab'
 import SafariTab from '@/components/tabs/safariTab'
 import PicTab from '@/components/tabs/picTab'
-import { safariTabTexts, notesTabTexts, picTabTexts, picTabTexts2 } from '@/components/content/text' // 确保 picTabTexts2 被导入
+import { safariTabTexts, notesTabTexts, picTabTexts } from '@/components/content/text'
+import Navbar from '@/components/Navbar'; // 引入导航栏
 
 const Home = () => {
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
@@ -43,23 +44,25 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={targetRef} className={styles.main}>
-      {notesTabTexts.map((tab, index) => (
-        <NotesTab text={tab.text} link={tab.link} name={tab.name} key={index} x={tab.x} y={tab.y} deg={tab.deg} drag={tab.drag} />
-      ))}
-
-      {safariTabTexts.map((tab, index) => (
-        <SafariTab name={tab.name} key={index} drag={tab.drag} text={tab.text} x={tab.x} y={tab.y} />
-      ))}
-
-      {picTabTexts.map((tab, index) => (
-        <PicTab key={index} drag={tab.drag} link={tab.link} width={tab.width} height={tab.height} pic={tab.pic} x={tab.x} y={tab.y} />
-      ))}
-
-      {/* 渲染 picTabTexts2 */}
-      {picTabTexts2.map((tab, index) => (
-        <PicTab key={index} drag={tab.drag} link={tab.link} width={tab.width} height={tab.height} pic={tab.pic} x={tab.x} y={tab.y} />
-      ))}
+    <div>
+      <Navbar /> {/* 添加导航栏 */}
+      <div ref={targetRef} className={styles.main}>
+        <div id="notes">
+          {notesTabTexts.map((tab, index) => (
+            <NotesTab text={tab.text} link={tab.link} name={tab.name} key={index} x={tab.x} y={tab.y} deg={tab.deg} drag={tab.drag} />
+          ))}
+        </div>
+        <div id="safari">
+          {safariTabTexts.map((tab, index) => (
+            <SafariTab name={tab.name} key={index} drag={tab.drag} text={tab.text} x={tab.x} y={tab.y} />
+          ))}
+        </div>
+        <div id="pics">
+          {picTabTexts.map((tab, index) => (
+            <PicTab key={index} drag={tab.drag} link={tab.link} width={tab.width} height={tab.height} pic={tab.pic} x={tab.x} y={tab.y} />
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
