@@ -85,6 +85,7 @@ export const notesTabTexts = [
         drag: true,
         deg: "5",
     },
+    
     {
         name: "social.zip",
         text: <Socials />,
