@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'cavasify',
-  description: "an open-source customizable portfolio template of a canvas which can be used as your portfolio",
+  title: 'Sticky Note',
+  description: "Sticky Note",
 }
 
 export default function RootLayout({ children }) {
